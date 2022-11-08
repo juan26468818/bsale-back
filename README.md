@@ -9,5 +9,5 @@ This is the back end of an Ecommerce store for bsale
 ## Dependencies 👀:
   - Express
   - mysql
-  ### Development Dependencies:
-    - nodemon
+## Development Dependencies:
+  - nodemon
