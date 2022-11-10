@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const path = require("path")
+
 
 // Settings
 app.set("port", process.env.PORT || 3000);
@@ -8,7 +10,10 @@ app.set("port", process.env.PORT || 3000);
 app.use(express.json());
 
 // Routes
-app.use(require("./routes/products"));
+app.use("/api/products", require("./routes/products"));
+
+// Static files
+app.use(express.static(path.join(__dirname, "./front")))
 
 
 // Starting the server
