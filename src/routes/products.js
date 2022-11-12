@@ -23,5 +23,15 @@ router.get("/:id", (req, res)=>{
         }
     })
 })
+router.get("/category/:cat", (req, res)=>{
+    const { cat } = req.params;
+    mysqlConnection.query("SELECT * FROM product WHERE category = ?", [cat], (err, rows, fields)=>{
+        if(!err){
+            res.json(rows);
+        } else{
+            console.error(err)
+        }
+    })
+})
 
 module.exports = router;
