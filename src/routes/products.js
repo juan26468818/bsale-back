@@ -33,5 +33,15 @@ router.get("/category/:cat", (req, res)=>{
         }
     })
 })
+router.get("/name/:name", (req, res)=>{
+    const { name } = req.params;
+    mysqlConnection.query("SELECT * FROM product WHERE name REGEXP ?", [name], (err, rows, fields)=>{
+        if(!err){
+            res.json(rows);
+        } else{
+            console.error(err)
+        }
+    })
+})
 
 module.exports = router;
