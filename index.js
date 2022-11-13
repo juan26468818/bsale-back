@@ -1,20 +1,21 @@
+//@ts-check
+/** Import of express */
 const express = require("express");
+/** Constant to use express()*/
 const app = express();
-const path = require("path")
 
 
 // Settings
 app.set("port", process.env.PORT || 3000);
 
-// Middlewares
 app.use(express.json());
 
 // Routes
-app.use("/api/products", require("./routes/products"));
-app.use("/api/categories", require("./routes/categories"));
+app.use("/api/products", require("./src/routes/products"));
+app.use("/api/categories", require("./src/routes/categories"));
 
 // Static files
-app.use(express.static(path.join(__dirname, "./front")))
+app.use("/", express.static("./src/front"))
 
 
 // Starting the server
