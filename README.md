@@ -8,6 +8,7 @@ This is the Back-End for a test of BSALE, this project is going to have all the 
 
 ### This project is deployed with Hekoru, you can access the web here: https://bsales-demo.herokuapp.com/
 ### You can see the Front-End Repository here: https://github.com/juan26468818/bsale-front
+### You can also see the documentation here: https://fancy-bienenstitch-79cee8.netlify.app
 
 ## Technologies being used 💻:
   - MySQL
